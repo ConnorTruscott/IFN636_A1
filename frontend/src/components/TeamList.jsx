@@ -21,7 +21,7 @@ const TeamList = ({ teams, setTeams, setEditingTeam }) => {
         <div key={team._id} className="bg-gray-100 p-4 mb-4 rounded shadow">
           <h2 className="font-bold">{team.title}</h2>
           <p>{team.description}</p>
-          <p className="text-sm text-gray-500">Deadline: {new Date(team.deadline).toLocaleDateString()}</p>
+          <p className="text-sm text-gray-500">Team: {team.name}</p>
           <div className="mt-2">
             <button
               onClick={() => setEditingTeam(team)}

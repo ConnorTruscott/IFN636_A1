@@ -1,3 +1,4 @@
+console.log('Team routes hit')
 
 const express = require('express');
 const { getTeams, addTeam, updateTeam, deleteTeam } = require('../controllers/teamController');
