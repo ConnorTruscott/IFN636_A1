@@ -10,7 +10,6 @@ const getTeams = async(req, res) =>{
     }
 };
 
-
 const addTeam = async(req, res) => {
     const{name, members, skill}=req.body;
     try{
