@@ -15,6 +15,7 @@ const TeamList = ({ teams, setTeams, setEditingTeam }) => {
     }
   };
 
+  
   return (
     <div>
       {teams.map((team) => (
