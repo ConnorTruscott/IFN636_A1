@@ -43,6 +43,8 @@ const deleteTeam = async (req,res) =>{
         if (!team) return res.status(404).json({message: 'Team Not Found'});
 
         await team.remove();
+
+        res.json({ message: 'Team deleted successfully' });
     } catch(error){
         res.status(500).json({message: error.message});
     }
