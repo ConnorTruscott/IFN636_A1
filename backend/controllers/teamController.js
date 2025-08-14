@@ -30,7 +30,7 @@ const updateTeam = async(req, res) =>{
         team.members = members || team.members;
         team.skill = skill || team.skill;
 
-        const updatedTeam = await TeamForm.save();
+        const updatedTeam = await team.save();
         res.json(updatedTeam);
     } catch (error){
         res.status(500).json({message: error.message});
