@@ -17,6 +17,7 @@ const TaskForm = ({ tasks, setTasks, editingTask, setEditingTask }) => {
       setFormData({ title: '', description: '', deadline: '' });
     }
   }, [editingTask]);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
