@@ -9,9 +9,9 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
   useEffect(() => {
     if (editingTeam) {
       setFormData({
-        title: editingTeam.title,
-        description: editingTeam.description,
-        deadline: editingTeam.deadline,
+        name: editingTeam.name,
+        members: editingTeam.members,
+        skill: editingTeam.skill,
       });
     } else {
       setFormData({ name: '', members: '', skill: '' });
