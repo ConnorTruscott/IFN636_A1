@@ -58,13 +58,13 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
       />
       <input
         type="text"
-        placeholder='Skill Level (Beginner, Intermediate, Advanced)'
+        placeholder="Skill Level (Beginner, Intermediate, Advanced)"
         value={formData.skill}
         onChange={(e) => setFormData({ ...formData, skill: e.target.value })}
         className="w-full mb-4 p-2 border rounded"
       />
       <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
-        {editingTeam ? 'Update Button' : 'Create Button'}
+        {editingTeam ? 'Update Team' : 'Create Team'}
       </button>
     </form>
   );
