@@ -4,17 +4,17 @@ import axiosInstance from '../axiosConfig';
 
 const TaskForm = ({ tasks, setTasks, editingTask, setEditingTask }) => {
   const { user } = useAuth();
-  const [formData, setFormData] = useState({ name: '', members: '', skill: '' });
+  const [formData, setFormData] = useState({ title: '', description: '', deadline: '' });
 
   useEffect(() => {
     if (editingTask) {
       setFormData({
-        name: editingTask.name,
-        members: editingTask.members,
-        skill: editingTask.skill,
+        title: editingTask.title,
+        description: editingTask.description,
+        deadline: editingTask.deadline,
       });
     } else {
-      setFormData({ name: '', members: '', skill: '' });
+      setFormData({ title: '', description: '', deadline: '' });
     }
   }, [editingTask]);
 

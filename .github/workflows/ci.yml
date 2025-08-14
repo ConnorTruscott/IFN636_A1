@@ -9,8 +9,8 @@ on:
 jobs:
   test:
     name: Run Tests
-    runs-on: self-hosted
-
+    runs-on: ["self-hosted", "ubuntu-latest"]
+    
     strategy:
       matrix:
         node-version: [22] # Test on multiple Node.js versions
