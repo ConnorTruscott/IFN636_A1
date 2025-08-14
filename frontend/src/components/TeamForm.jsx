@@ -58,6 +58,7 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
       />
       <input
         type="text"
+        placeholder='Skill Level (Beginner, Intermediate, Advanced)'
         value={formData.skill}
         onChange={(e) => setFormData({ ...formData, skill: e.target.value })}
         className="w-full mb-4 p-2 border rounded"
