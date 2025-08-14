@@ -50,5 +50,4 @@ const deleteTeam = async (req,res) =>{
     }
 };
 
-
 module.exports= {getTeams, addTeam, updateTeam, deleteTeam}
