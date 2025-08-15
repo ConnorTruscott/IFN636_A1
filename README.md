@@ -17,30 +17,43 @@ A simple React & Node.js/MongoDB application for managing hackathon events and t
 
 **1. Clone the repo**
 From a terminal:
+```
 git clone https://github.com/ConnorTruscott/IFN636_A1
 cd IFN636_A1
+```
 
 **2 Install Backend Dependencies**
+```
 cd backend
 npm install
+```
 
 **3 Configure Environment Variables**
-nano .env **May require sudo**
-
+```
+nano .env
+```
+**May require sudo**
+```
 MONGO_URI=<your_mongo_connection_string>
 JWT_SECRET=<your_jwt_secret>
 PORT=5001
+```
 
 **4. Start Backend Server**
+```
 npm run dev
+```
 
 **5. Install Frontend Dependencies**
 From a new terminal in frontend folder:
-
+```
 npm install
+```
 
 **6. Start Frontend**
+```
 npm start
+```
 
 **7. Access the App**
 Visit http://localhost:3000 in browser
