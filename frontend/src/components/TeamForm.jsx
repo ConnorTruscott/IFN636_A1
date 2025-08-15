@@ -94,7 +94,7 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
         
 
       </div>
-      <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
+      <button type="submit" className="ww-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 active:bg-blue-800">
         {editingTeam ? 'Update Team' : 'Create Team'}
       </button>
     </form>

@@ -16,12 +16,12 @@ const Navbar = () => {
       <div>
         {user ? (
           <>
-            <Link to="/teams" className="mr-4">Teams</Link>
-            <Link to="/events" className='mr-4'>Events</Link>
-            <Link to="/profile" className="mr-4">Profile</Link>
+            <Link to="/teams" className="mr-4 hover:underline transition duration-200">Teams</Link>
+            <Link to="/events" className='mr-4 hover:underline transition duration-200'>Events</Link>
+            <Link to="/profile" className="mr-4 hover:underline transition duration-200">Profile</Link>
             <button
               onClick={handleLogout}
-              className="bg-red-500 px-4 py-2 rounded hover:bg-red-700"
+              className="bg-red-500 px-4 py-2 rounded hover:bg-red-700 active:bg-red-800"
             >
               Logout
             </button>

@@ -28,13 +28,13 @@ const TeamList = ({ teams, setTeams, setEditingTeam }) => {
           <div className="mt-2">
             <button
               onClick={() => setEditingTeam(team)}
-              className="mr-2 bg-yellow-500 text-white px-4 py-2 rounded"
+              className="mr-2 bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 active:bg-yellow-700"
             >
               Edit
             </button>
             <button
               onClick={() => handleDelete(team._id)}
-              className="bg-red-500 text-white px-4 py-2 rounded"
+              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 active:bg-red-700"
             >
               Delete
             </button>

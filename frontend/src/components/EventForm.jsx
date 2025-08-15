@@ -102,7 +102,7 @@ const EventForm = ({ events, setEvents, editingEvent, setEditingEvent }) => {
         
 
       </div>
-      <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
+      <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 active:bg-blue-800">
         {editingEvent ? 'Update Event' : 'Create Event'}
       </button>
     </form>
