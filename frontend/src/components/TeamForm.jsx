@@ -56,13 +56,47 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
         onChange={(e) => setFormData({ ...formData, members: e.target.value })}
         className="w-full mb-4 p-2 border rounded"
       />
-      <input
-        type="text"
-        placeholder="Skill Level (Beginner, Intermediate, Advanced)"
-        value={formData.skill}
-        onChange={(e) => setFormData({ ...formData, skill: e.target.value })}
-        className="w-full mb-4 p-2 border rounded"
-      />
+      <div className='mb-4'>
+        <p className='mb-2'>Skill Level</p>
+
+        <label className='mr-4'>
+          <input
+          type = 'radio'
+          name='skill'
+          value='Beginner'
+          checked={formData.skill === 'Beginner'}
+          onChange={(e) => setFormData({...formData, skill: e.target.value})}
+          className='w-full mb-4 p-2 border rounded'
+          />
+          Beginner
+        </label>
+
+        <label className='mr-4'>
+          <input
+          type = 'radio'
+          name='skill'
+          value='Intermediate'
+          checked={formData.skill === 'Intermediate'}
+          onChange={(e) => setFormData({...formData, skill: e.target.value})}
+          className='w-full mb-4 p-2 border rounded'
+          />
+          Intermediate
+        </label>
+
+        <label className='mr-4'>
+          <input
+          type = 'radio'
+          name='skill'
+          value='Advanced'
+          checked={formData.skill === 'Advanced'}
+          onChange={(e) => setFormData({...formData, skill: e.target.value})}
+          className='w-full mb-4 p-2 border rounded'
+          />
+          Advanced
+        </label>
+        
+
+      </div>
       <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded">
         {editingTeam ? 'Update Team' : 'Create Team'}
       </button>

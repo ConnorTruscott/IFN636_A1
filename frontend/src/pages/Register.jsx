@@ -27,6 +27,7 @@ const Register = () => {
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-full mb-4 p-2 border rounded"
+          autoFocus
         />
         <input
           type="email"

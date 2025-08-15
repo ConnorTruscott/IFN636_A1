@@ -23,6 +23,7 @@ const TeamList = ({ teams, setTeams, setEditingTeam }) => {
           <h2 className="font-bold">{team.title}</h2>
           <p>{team.description}</p>
           <p className="text-sm text-gray-500">Team: {team.name}</p>
+          <p className='text-sm text-gray-500'>{team.skill}</p>
           <div className="mt-2">
             <button
               onClick={() => setEditingTeam(team)}
