@@ -22,7 +22,7 @@ const EventList = ({ events, setEvents, setEditingEvent }) => {
           <h2 className="font-bold">{event.name}</h2>
           <p>{event.description}</p>
           <p className="text-sm text-gray-500">Date: {new Date(event.date).toLocaleDateString()}</p>
-          <p className='text-sm text-gray-500'>{event.skill}</p>
+          <p className='text-sm text-gray-500'>Skill Level: {event.skill}</p>
           <div className="mt-2">
             <button
               onClick={() => setEditingEvent(event)}

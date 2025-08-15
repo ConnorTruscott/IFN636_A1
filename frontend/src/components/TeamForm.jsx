@@ -41,7 +41,7 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 shadow-md rounded mb-6">
-      <h1 className="text-2xl font-bold mb-4">{editingTeam ? 'Team Management: Edit Operation' : 'Team Creation: Create Operation'}</h1>
+      <h1 className="text-2xl font-bold mb-4">{editingTeam ? 'Edit Team' : 'Create a Team'}</h1>
       <input
         type="text"
         placeholder="Team Name"
@@ -59,38 +59,35 @@ const TeamForm = ({ teams, setTeams, editingTeam, setEditingTeam }) => {
       <div className='mb-4'>
         <p className='mb-2'>Skill Level</p>
 
-        <label className='mr-4'>
+        <label className='flex items-center space-x-2'>
           <input
           type = 'radio'
           name='skill'
           value='Beginner'
           checked={formData.skill === 'Beginner'}
           onChange={(e) => setFormData({...formData, skill: e.target.value})}
-          className='w-full mb-4 p-2 border rounded'
           />
           Beginner
         </label>
 
-        <label className='mr-4'>
+        <label className='flex items-center space-x-2'>
           <input
           type = 'radio'
           name='skill'
           value='Intermediate'
           checked={formData.skill === 'Intermediate'}
           onChange={(e) => setFormData({...formData, skill: e.target.value})}
-          className='w-full mb-4 p-2 border rounded'
           />
           Intermediate
         </label>
 
-        <label className='mr-4'>
+        <label className='flex items-center space-x-2'>
           <input
           type = 'radio'
           name='skill'
           value='Advanced'
           checked={formData.skill === 'Advanced'}
           onChange={(e) => setFormData({...formData, skill: e.target.value})}
-          className='w-full mb-4 p-2 border rounded'
           />
           Advanced
         </label>
