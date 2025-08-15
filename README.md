@@ -1,94 +1,119 @@
+## Hackathon Management System App ##
 
-**Assessment 1 (Total Marks **20**)**
-
-Assignment: **Software requirements analysis and design (**Full-Stack CRUD Application Development with DevOps Practices**)**
-
+A simple React & Node.js/MongoDB application for managing hackathon events and teams. Users can create, view, edit and delete events and teams.
 
 ---
 
-**Objective**
-
-You have been provided with a starter project that includes user authentication using Node.js, React.js, and MongoDB. Your task is to extend this application by implementing CRUD (Create, Read, Update, Delete) operations of different featuresfor a real-world application of your choice, while following industry best practices such as: 
-
-* **Project Management with JIRA**
-* **Requirement Diagram**, **Block Definition Diagram (**BDD), Parametric Diagram using**SysML**
-* **Version Control using GitHub**
-* **CI/CD Integration for Automated Deployment**
+## Tech Stack ##
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+- **Authentication:** JWT
+- **HTTP Client:** Axios
 
 ---
 
-**GitHub link of the starter project: **[https://github.com/rajuiit/sdlapps](https://github.com/rajuiit/sdlapps)
+##**Project Local Setup Instructions**##
 
----
+**1. Clone the repo**
+From a terminal:
+git clone https://github.com/ConnorTruscott/IFN636_A1
+cd IFN636_A1
 
-**Requirement**
+**2 Install Backend Dependencies**
+cd backend
+npm install
 
-1. **Choose a Real-World Application**
+**3 Configure Environment Variables**
+nano .env **May require sudo**
 
-We will send you an email to choose a Real-World project. If you face any difficulties in choosing your project, please contact your tutor.
+MONGO_URI=<your_mongo_connection_string>
+JWT_SECRET=<your_jwt_secret>
+PORT=5001
 
-2. **Project Design with SysML and Project Management with JIRA**
+**4. Start Backend Server**
+npm run dev
 
-* Draw a requirements diagram, Block Definition Diagram (BDD), and Parametric Diagram based on your project (Connect all functional features).
-* Create a JIRA project and define:
-  * Epic
-  * User Stories (features required in your app)
-  * Child issues or Subtasks (breaking down development work)
-  * Sprint Implementation (organizing work into milestones)
-* Provide your JIRA board URL in the project README.
+**5. Install Frontend Dependencies**
+From a new terminal in frontend folder:
 
-**3. Backend Development (Node.js + Express + MongoDB)**
+npm install
 
-* Set up and configure the MongoDB database connection.
-* Implement various backend functions for handling application data.Ensure that all functions are compatible with an Application Programming Interface (API) structure(Follow existing patterns used in the Task Manager App where applicable).
-* Implement CRUD operations forcreating, reading, updating, and deleting records for each functionality.
+**6. Start Frontend**
+npm start
 
-4. **Frontend Development (React.js)**
+**7. Access the App**
+Visit http://localhost:3000 in browser
 
-* Create a user-friendly interface to interact with your API endpoint (Follow task manager app).
-* Implement different forms for adding, updating, and deleting records.
-* Display data using tables, cards, or lists (Follow how we showed data in task manager app, try to implement better visualization for the frontend.)
+**Current Live Version**
+For access to the current live version of this project, please visit http://52.63.145.55
 
-**5. Authentication & Authorization** (Prerequisite Task)
+Any issues or queries, please contact me at n9296212@qut.edu.au
 
-* Ensure only authenticated users can access and perform CRUD operations. (Already developed in your project)
-* Use JWT (JSON Web Tokens) for user authentication (Use the task manager one from .env file).
+**Folder Structure**
 
-**6. GitHub Version Control & Branching Strategy**
-
-* Use GitHub for version control and maintain:
-* main branch (stable production-ready code)
-* Feature branches for each new feature
-* Follow proper commit messages and pull request (PR) for code reviews.
-
-**7. CI/CD Pipeline Setup**
-
-* Implement a CI/CD pipeline using GitHub Actions to:
-* Automatically run tests on every commit/pull request (Optional).
-* Deploy the backend to AWS. (Use the QUT provided EC2 instance)
-* Deploy the frontend to AWS.
-* Document your CI/CD workflow in the README.
-
----
-
-**Submission Requirements**
-
-**A report **contains** the following (Provide screenshots as evidence for each implemented task. **The screenshot should **contain** your username** from JIRA, GITHUB, and AWS**):
-
-* **JIRA Project **Management**(Provide screenshots in the **report o**f at least two epics**, **including user story, sub**t**a**sks**. **Please **don’t** provide **the **U**ser Authentication** epic**.**Provide your JIRA Board URL in the report and README file as well.**Through the JIRA Board, we will systematically review the completeness of the project features, organised under Epics, User Stories, and Sub-tasks.**
-* Requirement diagram, Block Definition Diagram (BDD), Parametric Diagram (Using project features).
-* **GitHub Repository (backend/ and frontend/)** link. We will **review** your code implementation, which you followed from the task description. We will also **review** your commits, main branch, feature branches, and pull requests. **(**Please note that the authorisation** (Log In, Registration)** is the prerequisite for backend development.**)**
-* CI/CD pipeline details step by step screenshot.
-* README.md with:
-* Project setup instructions.
-* Public URL of your project.
-* Provide a project-specific username and password if we need to access your dashboard.
-
----
-
-**Assessment Criteria:**
-
-* Clarity and completeness of Jira board and SysML models.
-* Adherence to Git best practices and practical contributions.
-* Successful implementation, deploymentand CI/CD pipeline.
-* Problem-solving skills and the ability to go beyond basic requirements.
+```
+└── .github
+    └── workflows
+        └── ci.yml
+└── backend
+    └── config
+        ├── db.js
+    └── controllers
+        ├── authController.js
+        ├── eventController.js
+        ├── teamController.js
+    └── middleware
+        ├── authMiddleware.js
+    └── models
+        ├── Event.js
+        ├── Team.js
+        ├── User.js
+    └── routes
+        ├── authRoutes.js
+        ├── eventRoutes.js
+        ├── teamRoutes.js
+    └── test
+        ├── test.js
+    ├── .gitignore
+    ├── package-lock.json
+    ├── package.json
+    └── server.js
+└── frontend
+    └── public
+        ├── favicon.ico
+        ├── index.html
+        ├── logo192.png
+        ├── logo512.png
+        ├── manifest.json
+        ├── robots.txt
+    └── src
+        └── components
+            ├── EventForm.jsx
+            ├── EventList.jsx
+            ├── Navbar.jsx
+            ├── TeamForm.jsx
+            ├── TeamList.jsx
+        └── context
+            ├── AuthContext.js
+        └── pages
+            ├── Events.jsx
+            ├── Login.jsx
+            ├── Profile.jsx
+            ├── Register.jsx
+            ├── Teams.jsx
+        ├── App.css
+        ├── App.js
+        ├── App.test.js
+        ├── axiosConfig.jsx
+        ├── index.css
+        ├── index.js
+        ├── logo.svg
+        ├── reportWebVitals.js
+        ├── setupTests.js
+    ├── .gitignore
+    ├── package-lock.json
+    ├── package.json
+    ├── README.md
+    └── tailwind.config.js
+```
