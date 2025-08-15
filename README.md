@@ -59,7 +59,7 @@ npm start
 Visit http://localhost:3000 in browser
 
 **Current Live Version**
-For access to the current live version of this project, please visit http://52.63.145.55
+For access to the current live version of this project, please visit http://16.176.206.179
 
 Any issues or queries, please contact me at n9296212@qut.edu.au
 
