@@ -1,6 +1,7 @@
 const Team = require('../models/Team');
 const User = require('../models/User');
 
+//Fetch function for teams
 const getTeams = async(req, res) =>{
     try{
         const teams = await Team.find({UserId: req.user.id});
@@ -10,6 +11,7 @@ const getTeams = async(req, res) =>{
     }
 };
 
+//Create function for teams
 const addTeam = async(req, res) => {
     const{name, members, skill}=req.body;
     try{
@@ -20,6 +22,7 @@ const addTeam = async(req, res) => {
     }
 };
 
+//Update function for teams
 const updateTeam = async(req, res) =>{
     const {name, members, skill}=req.body;
     try{
@@ -37,6 +40,7 @@ const updateTeam = async(req, res) =>{
     }
 };
 
+//Delete functions for teams
 const deleteTeam = async (req,res) =>{
     try{
         const team = await Team.findById(req.params.id);

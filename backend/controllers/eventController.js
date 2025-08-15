@@ -1,6 +1,7 @@
 const Event = require('../models/Event');
 const User = require('../models/User');
 
+//Get function for events
 const getEvent = async(req, res) =>{
     try{
         const events = await Event.find({UserId: req.user.id});
@@ -10,6 +11,7 @@ const getEvent = async(req, res) =>{
     }
 };
 
+//Create function for events
 const addEvent = async(req, res) => {
     const{name, description, date, skill}=req.body;
     try{
@@ -20,6 +22,7 @@ const addEvent = async(req, res) => {
     }
 };
 
+//Update function for events
 const updateEvent = async(req, res) =>{
     const {name, description, date, skill}=req.body;
     try{
@@ -38,6 +41,7 @@ const updateEvent = async(req, res) =>{
     }
 };
 
+//Delete functions for events
 const deleteEvent = async (req,res) =>{
     try{
         const event = await Event.findById(req.params.id);
